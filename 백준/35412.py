@@ -1,3 +1,5 @@
+# 백준 35412 스택과 팰린드롬
+
 import sys
 input = sys.stdin.readline
 
@@ -30,5 +32,4 @@ if not R:
     print(-1)
 else:
     print(''.join(R))
-
 # 이 문제에서 길이가 4인 팰린드롬은 존재 할 수 없다.

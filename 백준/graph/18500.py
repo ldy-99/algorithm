@@ -1,4 +1,5 @@
 # 백준 18500 / 그래프 탐색 , 시뮬레이션
+
 import sys
 from collections import deque
 input = sys.stdin.readline

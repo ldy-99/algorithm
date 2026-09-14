@@ -1,3 +1,5 @@
+# 백준 10655번 마라톤1
+
 import sys
 input = sys.stdin.readline
 
