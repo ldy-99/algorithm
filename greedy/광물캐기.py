@@ -37,3 +37,5 @@ def solution(picks, minerals):
             idx += 1
 
     return answer
+
+# 시간 복잡도 O(N+ GlogG) 광물 수를 N, 그룹 수를 G
