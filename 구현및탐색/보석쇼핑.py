@@ -1,33 +1,38 @@
 #프로그래머스 보석 쇼핑 (투 포인터 , 슬라이딩 윈도우)
 
-# 1. 전체 보석 종류의 개수를 구한다.
-#    total = set(gems)의 크기
+from collections import defaultdict
 
-# 2. 변수 초기화
-#    left = 0
-#    count = 빈 딕셔너리
-#    min_length = 무한대
-#    answer = []
+def solution(gems):
+    total = len(set(gems))
 
-# 3. right를 0부터 gems의 마지막 인덱스까지 이동한다.
+    left = 0
+    count = defaultdict(int)
+    min_length = float('inf')
+    answer = []
 
-#    3-1. 현재 right 위치의 보석을 딕셔너리에 추가한다.
-#         count[gems[right]] += 1
+    for right in range(len(gems)):
 
-#    3-2. 현재 구간에 모든 종류의 보석이 포함되어 있다면
-#         while 딕셔너리의 크기 == total:
+        # 오른쪽 포인터의 보석 추가
+        count[gems[right]] += 1
 
-#             ① 현재 구간의 길이를 계산한다.
+        # 모든 종류의 보석이 포함되어 있다면
+        while len(count) == total:
 
-#             ② 현재 구간이 기존 최소 길이보다 짧다면
-#                - 최소 길이를 갱신한다.
-#                - answer = [left + 1, right + 1]
+            # 현재 구간 길이 계산
+            length = right - left + 1
 
-#             ③ left 위치의 보석 개수를 1 감소시킨다.
+            # 최소 길이 갱신
+            if length < min_length:
+                min_length = length
+                answer = [left + 1, right + 1]
 
-#             ④ 해당 보석의 개수가 0이 되었다면
-#                - 딕셔너리에서 해당 보석을 삭제한다.
+            # 왼쪽 포인터의 보석 제거
+            count[gems[left]] -= 1
 
-#             ⑤ left를 1 증가시킨다.
+            # 보석 개수가 0이면 딕셔너리에서 삭제
+            if count[gems[left]] == 0:
+                del count[gems[left]]
 
-# 4. answer를 반환한다.
+            # 왼쪽 포인터 이동
+            left += 1
+    return answer
