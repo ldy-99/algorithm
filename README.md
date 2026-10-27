@@ -39,3 +39,4 @@ Python으로 알고리즘 문제를 풀고, 풀이 과정에서 배운 점을 �
 | [바이러스 파이프](https://school.programmers.co.kr/learn/courses/30/lessons/468373) | 현재 감염된 모든 노드를 시작점으로 BFS를 수행해, 선택한 종류의 파이프로 도달할 수 있는 모든 노드를 감염시킨다. | 1 | [바로가기](./graph/바이러스파이프.py/) |
 |[방의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/49190) | 그래프 탐색을 사용할 필요가 없는 이유는 arrows 순서 자체가 이미 이동 순서를 정해주기 때문이고 이동 경로가 X와 같은 교차점 처리를 하기 위해서 한 번의 이동을 2번으로 나눈다.| 1 | [바로가기](./graph/방의개수.py/) |
 |[광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927) | 전형적인 그리디 + 정렬 문제이다. 정렬 -> 분배 -> 피로도 계산의 흐름을 잘 따라가면 된다. 다이아가 1순위 정렬 , 다이아 개수가 같다면 철의 개수에 따라 2순위 정렬이 핵심.| 1 | [바로가기](./greedy/광물캐기.py/) |
+| [과제 진행하기](https://school.programmers.co.kr/learn/courses/30/lessons/176962) | 스택 + 정렬 + 시뮬레이션으로 시간의 흐름에 따른 과제처리와 while stack 으로 중단된 과제를 처리해주는게 핵심이다 | 1 | [바로가기](./Data_Structure/과제진행하기.py) |
