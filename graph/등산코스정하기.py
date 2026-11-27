@@ -57,3 +57,7 @@ def solution(n, paths, gates, summits):
         answer.append((s,intensity[s]))
     answer.sort(key=lambda x : (x[1],x[0]))
     return answer[0]
+
+# 다익스트라 탐색 과정에서 현재 노드가 산봉우리인지, 다음 노드가 출입구인지 반복적으로 확인해야 합니다.
+# 리스트를 사용하면 원소의 존재 여부를 확인하는 데 O(N)의 시간이 필요하지만, set은 해시 테이블을 기반으로 평균 O(1)에 확인할 수 있습니다.
+# 따라서 반복적인 탐색 비용을 줄이기 위해 set으로 변환했습니다.
