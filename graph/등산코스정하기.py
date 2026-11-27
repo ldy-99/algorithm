@@ -1,4 +1,6 @@
-# 프로그래머스 등산코드정하기
+# 프로그래머스 등산코스정하기
+# 일반적인 최단거리의 다익스트라가 아님
+
 from collections import defaultdict
 import heapq
 
@@ -7,9 +9,11 @@ def solution(n, paths, gates, summits):
     INF = float('inf')
     graph = defaultdict(list)
 
+    # 리스트보다 set 이 in 연산에서 유리함
     gate_set = set(gates)
     summit_set = set(summits)
 
+    # 그래프 모델링
     for a, b, c in paths:
         graph[a].append((b, c))
         graph[b].append((a, c))
